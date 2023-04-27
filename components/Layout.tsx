@@ -6,10 +6,13 @@ interface ILayout {
 }
 
 export default function Layout({ children }: ILayout) {
+
   return (
     <div className="relative h-screen flex flex-col row justify-center items-center text-left">
+
       <main className="mb-12">{children}</main>
+
       <Navigation />
-    </div>
+    </div >
   )
 }

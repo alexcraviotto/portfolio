@@ -1,17 +1,24 @@
 import Title from '@/components/Title'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 
 
 export default function Home() {
+
   return (
+
     <main>
-      <div>
+      <motion.div
+        key={'IndexFK'}
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
         <div>
           <Title />
         </div>
-
-      </div>
-    </main>
+      </motion.div >
+    </main >
   )
 }
