@@ -28,7 +28,7 @@ export default function Project() {
   }, [router.query.projectID]);
 
   return (
-    <main className="mx-40 flex flex-col items-center">
+    <main className="mx-40 flex flex-col text-center items-center lg:w-96">
       <motion.div
         key={"ProjectsFK"}
         exit={{ opacity: 0 }}
@@ -45,7 +45,7 @@ export default function Project() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-      <h2 className="text-xs text-justify lg:px-80">{projectsRequested[project]}</h2>
+      <h2 className="text-xs text-justify ">{projectsRequested[project]}</h2>
       </motion.div> 
 
     </main>
