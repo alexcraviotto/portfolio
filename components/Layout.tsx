@@ -1,10 +1,15 @@
-import Navigation from 'components/Navigation.tsx'
+import { ReactNode } from "react";
+import Navigation from "./Navigation";
 
-export default function Layout({ children }) {
+interface ILayout {
+  children: ReactNode
+}
+
+export default function Layout({ children }: ILayout) {
   return (
-    <div class="relative h-screen flex flex-col row justify-center items-center text-left">
-      <main>{children}</main>
-        <Navigation/>    
+    <div className="relative h-screen flex flex-col row justify-center items-center text-left">
+      <main className="mb-12">{children}</main>
+      <Navigation />
     </div>
   )
 }
