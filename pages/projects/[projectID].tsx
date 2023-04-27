@@ -28,7 +28,7 @@ export default function Project() {
   }, [router.query.projectID]);
 
   return (
-    <main className="mx-40 flex flex-col text-center items-center lg:w-96">
+    <main className="mx-12 flex flex-col text-center items-center lg:w-96 lg:mx-40">
       <motion.div
         key={"ProjectsFK"}
         exit={{ opacity: 0 }}
