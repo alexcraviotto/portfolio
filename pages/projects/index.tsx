@@ -12,7 +12,7 @@ export default function Projects() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.1 }}
-      className="h-full overflow-y-scroll"
+      className="h-full"
     >
       <main className="max-h-full">
         <ProjectsList />

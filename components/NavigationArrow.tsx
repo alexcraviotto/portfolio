@@ -28,8 +28,8 @@ export default function NavigationArrow({
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6,delay: 0.1 }}
-      className="h-full overflow-y-scroll text-3xl "
+      transition={{ duration: 0.6, delay: 0.1 }}
+      className="h-full text-3xl "
       key={totalProjects}
     >
       {startIndex !== 0 && (

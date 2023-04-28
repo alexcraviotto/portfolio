@@ -53,7 +53,7 @@ export default function ProjectsList() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="h-full overflow-y-scroll text-xl lg:mb-0 lg:text-3xl lg:my-1"
+                className="h-full text-xl lg:mb-0 lg:text-3xl lg:my-1"
                 key={project.id}
               >
                 <Link href={"/projects/" + project.id}>{project.id}</Link>
