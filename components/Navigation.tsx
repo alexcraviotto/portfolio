@@ -18,7 +18,7 @@ export default function Navigation() {
             router.push(path)
         if (path == '/projects')
             router.push(path)
-        if (path == '/about')
+        if (path == '/contact')
             router.push(path)
     }
 
@@ -33,10 +33,10 @@ export default function Navigation() {
     }
 
     return (
-        <div className='flex justify-between space-x-14 text-xs'>
+        <div className='absolute flex justify-between space-x-14 text-xs lg:bottom-64 bottom-52  '>
             {renderButton({ path: '/', label: '/home' })}
             {renderButton({ path: '/projects', label: '/projects' })}
-            {renderButton({ path: '/about', label: '/about' })}
+            {renderButton({ path: '/contact', label: '/contact' })}
         </div>
     );
 }

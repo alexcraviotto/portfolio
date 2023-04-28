@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Projects() {
- 
+
 
   return (
     <motion.div
@@ -15,7 +15,7 @@ export default function Projects() {
       className="h-full overflow-y-scroll"
     >
       <main className="max-h-full">
-      <ProjectsList />
+        <ProjectsList />
       </main>
     </motion.div>
   );

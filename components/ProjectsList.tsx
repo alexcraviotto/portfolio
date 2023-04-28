@@ -46,27 +46,30 @@ export default function ProjectsList() {
         <p className="text-4xl">loading...</p>
       ) : (
         <>
-          <ul className="text-center">
+          <ul className="text-center mb-6 lg:mb-0">
             {projectList.slice(startIndex, endIndex).map((project) => (
               <motion.li
                 exit={{ opacity: 0 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="h-full overflow-y-scroll text-3xl my-1"
+                className="h-full overflow-y-scroll text-xl lg:mb-0 lg:text-3xl lg:my-1"
                 key={project.id}
               >
                 <Link href={"/projects/" + project.id}>{project.id}</Link>
               </motion.li>
             ))}
           </ul>
-          <NavigationArrow
-            moreProjects={moreProjectsOnClick}
-            lessProjects={lessProjectsOnClick}
-            totalProjects={projectList.length}
-            startIndex={startIndex}
-            endIndex={endIndex}
-          />
+          <div className="absolute lg:bottom-72 bottom-60">
+            <NavigationArrow
+              moreProjects={moreProjectsOnClick}
+              lessProjects={lessProjectsOnClick}
+              totalProjects={projectList.length}
+              startIndex={startIndex}
+              endIndex={endIndex}
+            />
+          </div>
+
         </>
       )}
     </main>
