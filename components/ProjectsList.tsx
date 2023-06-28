@@ -12,15 +12,21 @@ export default function ProjectsList() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     const getProjects = async () => {
-      const projects = await fetch("/api/projects");
-      const projectsJson = await projects.json();
-      setProjectsRequested(projectsJson);
+      try {
+        const projects = await fetch("/api/projects");
+        const projectsJson = await projects.json();
+        setProjectsRequested(projectsJson);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      } finally {
+        setLoading(false);
+      }
     };
     getProjects();
-    setLoading(false);
   }, []);
+  
 
   const projectList = Object.keys(projectsRequested).map((projectName) => ({
     id: projectName,

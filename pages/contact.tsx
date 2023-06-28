@@ -1,4 +1,5 @@
 import Github from "@/components/Github";
+import Linkedin from "@/components/Linkedin";
 import Mail from "@/components/Mail";
 import Twitter from "@/components/Twitter";
 import { motion } from "framer-motion";
@@ -17,6 +18,7 @@ export default function Contact() {
                 <Mail />
                 <Github />
                 <Twitter />
+                <Linkedin />
             </motion.div>
 
         </main >
